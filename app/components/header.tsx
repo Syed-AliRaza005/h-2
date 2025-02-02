@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { searchProducts } from "@/sanity/lib/queries";
 import ProductPage from "@/app/product/[slug]/page";
-import Search from "./search";
+
 import { Products } from "@/types/products";
 
 
@@ -21,9 +21,6 @@ function Header() {
             <p className="text-2xl font-bold">Furniro</p>
           </div>
         </Link>
-            {/* 🔹 Search Bar */}
-      <Search products={products} setFilteredProducts={setFilteredProducts} />
-
       
         <nav className="hidden md:flex space-x-6">
           <Link href="/" className="text-gray-700 hover:text-black font-medium">
