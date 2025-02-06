@@ -11,7 +11,7 @@ function Footer() {
         <div className="grid gap-8 sm:grid-cols-3">
     
           <div>
-            <h1 className="text-2xl font-bold mb-4">Funiro</h1>
+            <h1 className="text-2xl font-bold mb-4">AR MART</h1>
             <p className="text-gray-600">
               400 University Drive Suite 200 Coral Gables, FL 33134 USA
             </p>
@@ -71,7 +71,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-300 pt-4 text-center">
-          <p className="text-gray-600">© 2023 Funiro. All rights reserved.</p>
+          <p className="text-gray-600">© 2025 AR  MART. All rights reserved.</p>
         </div>
       </div>
     </footer>

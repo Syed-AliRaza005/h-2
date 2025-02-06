@@ -18,7 +18,7 @@ function Header() {
         <Link href="/">
           <div className="flex items-center space-x-3 cursor-pointer">
             <Image src="/images/logo.svg" alt="logo" width={50} height={32} />
-            <p className="text-2xl font-bold">Furniro</p>
+            <p className="text-2xl font-bold">AR MART</p>
           </div>
         </Link>
       

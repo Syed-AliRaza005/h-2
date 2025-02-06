@@ -1,6 +1,8 @@
 'use client'
 
-import { Products } from "types/products"
+import { Products } from "@/types/products"
+
+
 export const addToCart = (product: Products) => {
     const cart: Products[] = JSON.parse(localStorage.getItem('cart') || '[]')
 

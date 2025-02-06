@@ -8,10 +8,10 @@ function page() {
   return (
 
     <div className="grid  h-screen w-screen ">
-<Header/>
+      <Header />
       <div className="group115 mt-12 place-items-center w-screen h-auto top-[869px] left-[131px] ">
         <div className="group107 ">
-    
+
           <h2 className="font-oppins font-bold text-[32px] text-center">Browse The Range</h2>
           <p className="font-poppins font-[400px] text-[20px] text-c1 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
@@ -39,7 +39,7 @@ function page() {
                 alt="br"
                 width={450}
                 height={450} />
-                
+
               <p className="font-poppins font-semibold text-xl text-center">Bedroom</p>
             </div>
 
@@ -51,8 +51,8 @@ function page() {
 
       <hr className="w-screen bg-black h-[2px] mt-3" />
       <div>
-       <DATA/>
-        </div>
+        <DATA />
+      </div>
 
       {/* ll */}
       <div className="ins w-screen mt-12 h-auto top-[2763px]">
@@ -129,7 +129,7 @@ function page() {
           <p className="font-poppins font-semibold text-i2 text-xl">Share your setup with</p>
           <p className="font-poppins font-bold text-d2 text-[40px]">#FuniroFurniture</p>
         </div>
-            <Image
+        <Image
           src={"/images/fi1.svg"}
           alt=""
           width={1799}
@@ -137,9 +137,9 @@ function page() {
       </div>
 
       <div className="top-[4330px]">
-   
-      </div> 
-<Footer/>
+
+      </div>
+      <Footer />
 
     </div>
   );

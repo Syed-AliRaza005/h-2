@@ -20,6 +20,7 @@
     "next-sanity": "^9.8.46",
     "react": "^18",
     "react-dom": "^18",
+    "router": "^1.3.8",
     "sanity": "^3.72.1",
     "styled-components": "^6.1.14",
     "sweetalert2": "^11.15.10"

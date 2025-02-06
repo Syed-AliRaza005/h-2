@@ -16,7 +16,10 @@ const DATA = () => {
   const [filteredProducts, setFilteredProducts] = useState<Products[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [isFilterOpen, setIsFilterOpen] = useState(false); 
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -49,7 +52,7 @@ const DATA = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      {/* 🔹 Filter & Sorting Section */}
+
       <div className="flex justify-between items-center mb-6">
         <button
           onClick={() => setIsFilterOpen(true)}
@@ -139,6 +142,7 @@ const DATA = () => {
                       >
                         Add To Cart
                       </button>
+
                     </div>
                   </div>
                 </Link>
