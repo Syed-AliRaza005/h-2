@@ -1,4 +1,3 @@
-// components/ProductSkeleton.tsx
 
 import React from 'react';
 

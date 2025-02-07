@@ -7,7 +7,6 @@ import { removeFromCart, updateCartQuantity, getCartItems } from "../actions/act
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import Link from "next/link";
-import CheckOut from "../checkout/page";
 const CartPage = () => {
   const [CartItem, setCartItem] = useState<Products[]>([]);
 

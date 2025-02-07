@@ -6,11 +6,11 @@ function Hero() {
 
       <div className="bitmap w-screen h-auto ">
 
-        {/* <Image
+        <Image
           src={"/images/hero.svg"}
           alt="her"
           width={1440}
-          height={1007.93} /> */}
+          height={1007.93} />
       </div>
     </div>
   );

@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { searchProducts } from "@/sanity/lib/queries";
-import ProductPage from "@/app/product/[slug]/page";
 
 import { Products } from "@/types/products";
 
