@@ -7,6 +7,7 @@ import { removeFromCart, updateCartQuantity, getCartItems } from "../actions/act
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import Link from "next/link";
+import { product } from "@/sanity/schemaTypes/products";
 const CartPage = () => {
   const [CartItem, setCartItem] = useState<Products[]>([]);
 
@@ -34,34 +35,60 @@ const CartPage = () => {
   };
 
   
-  const handleIncrease = (id: string) => {
-    setCartItem((prevCart) => {
-      const updatedCart = prevCart.map((item) =>
-        item._id === id ? { ...item, inventory: (item.inventory || 1) + 1 } : item
-      );
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
-  };
+  // const handleIncrease = (id: string) => {
+  //   setCartItem((prevCart) => {
+  //     const updatedCart = prevCart.map((item) =>
+  //       item._id === id ? { ...item, inventory: (item.inventory || 1) + 1 } : item
+  //     );
+  //     localStorage.setItem("cart", JSON.stringify(updatedCart));
+  //     return updatedCart;
+  //   });
+
+  //   if () {
+  //     handleQuantity(id, item + 1);
+  //   }
+  // };
   
-  const handleDecrease = (id: string) => {
-    setCartItem((prevCart) => {
-      const updatedCart = prevCart.map((item) =>
-        item._id === id && item.inventory > 1
-          ? { ...item, inventory: item.inventory - 1 }
-          : item
-      );
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
-  };
+  // const handleDecrease = (id: string) => {
+  //   setCartItem((prevCart) => {
+  //     const updatedCart = prevCart.map((item) =>
+  //       item._id === id && item.inventory > 1
+  //         ? { ...item, inventory: item.inventory - 1 }
+  //         : item
+  //     );
+  //     localStorage.setItem("cart", JSON.stringify(updatedCart));
+  //     return updatedCart;
+  //   });
+  // };
   
 
-  const handleQuantity = (id: string, quantity: number) => {
+  // const handleQuantity = (id: string, quantity: number) => {
+  //   updateCartQuantity(id, quantity);
+  //   setCartItem(getCartItems());
+  // };
+
+
+
+  
+
+  const handleQuantityChange = (id: string, quantity: number) => {
     updateCartQuantity(id, quantity);
     setCartItem(getCartItems());
   };
 
+  const handleIncrease = (id: string) => {
+    const product = CartItem.find((item) => item._id === id);
+    if (product) {
+      handleQuantityChange(id, product.inventory + 1);
+    }
+  };
+
+  const handleDecrease = (id: string) => {
+    const product = CartItem.find((item) => item._id === id);
+    if (product && product.inventory > 1) {
+      handleQuantityChange(id, product.inventory - 1);
+    }
+  };
 
   const calculatedTotal = () => {
     return CartItem.reduce(

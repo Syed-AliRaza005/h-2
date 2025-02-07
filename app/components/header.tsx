@@ -1,14 +1,10 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Products } from "@/types/products";
-
 
 function Header() {
-  const [products, setProducts] = useState<Products[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<Products[]>([]);
   return (
     <header className="w-full bg-slate-300 shadow-md">
       <div className="container mx-auto flex items-center justify-between h-[100px] px-4">

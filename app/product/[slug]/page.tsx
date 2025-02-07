@@ -57,7 +57,7 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
     } else {
       const updatedCart = [
         ...cart,
-        { ...product, price: Number(product.price), inventory: 1 }, // Add quantity
+        { ...product, price: Number(product.price), inventory: 1 },
       ];
       setCart(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
