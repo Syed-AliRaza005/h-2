@@ -7,7 +7,6 @@ import { removeFromCart, updateCartQuantity, getCartItems } from "../actions/act
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import Link from "next/link";
-import { product } from "@/sanity/schemaTypes/products";
 const CartPage = () => {
   const [CartItem, setCartItem] = useState<Products[]>([]);
 
