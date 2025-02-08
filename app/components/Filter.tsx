@@ -12,7 +12,7 @@ const Filter: React.FC<FilterProps> = ({ products, setFilteredProducts }) => {
   const [isNew, setIsNew] = useState(false);
 
   // Generate unique tags from the products list
-  const tags = Array.from(new Set(products.flatMap((product) => product.tags)));
+  const tags = Array.from(new Set(products.flatMap((product) => product.tag)));
 
   // Function that applies all filters
   const applyFilters = (tag: string, price: [number, number], newOnly: boolean) => {
@@ -20,7 +20,7 @@ const Filter: React.FC<FilterProps> = ({ products, setFilteredProducts }) => {
 
     // Filter by selected tag
     if (tag) {
-      filtered = filtered.filter((product) => product.tags.includes(tag));
+      filtered = filtered.filter((product) => product.tag.includes(tag));
     }
 
     // Filter by price range
