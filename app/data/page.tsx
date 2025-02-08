@@ -121,14 +121,16 @@ const DATA = () => {
                         ${product.price}
                       </p>
                       <div className="flex flex-wrap gap-2 mt-2">
-                        {product.tags.map((tag: string) => (
+{/*                         {product.tags.map((tag: string) => (
                           <span
                             key={tag}
                             className="text-xs text-gray-600 bg-gray-200 px-2 py-1 rounded"
                           >
                             #{tag}
                           </span>
-                        ))}
+                        ))} */}
+                        <span className="text-xs text-gray-600 bg-gray-200 px-2 py-1 rounded">{product.tag}</span>
+                  
                       </div>
                       {product.isNew && (
                         <p className="text-sm text-green-500 font-semibold mt-2">
