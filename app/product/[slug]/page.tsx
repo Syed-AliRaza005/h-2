@@ -113,14 +113,15 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
               </p>
               <div className="flex flex-wrap gap-2">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Tags:</h3>
-                {product.tags?.map((tag, index) => (
+{/*                 {product.tags?.map((tag, index) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-purple-200 text-purple-800 text-sm rounded-full"
                   >
                     {tag}
                   </span>
-                ))}
+                ))} */}
+                <span>{product.tag}</span>
               </div>
             </div>
           </div>
